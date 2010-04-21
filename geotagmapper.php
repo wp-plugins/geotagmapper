@@ -8,7 +8,7 @@ Author: J&uuml;rgen Schulze
 Author URI: http://1manfactory.com
 */
 
-DEFINE("DEBUG", "true");	# set "true" or "false", quotation marks needed
+DEFINE("DEBUG", "false");	# set "true" or "false", quotation marks needed
 
 function my_plugin_admin_menu(){
 	$page=add_submenu_page("options-general.php", "Geotagmapper Settings", "Geotagmapper", 9, basename(__FILE__), 'my_plugin_options');
