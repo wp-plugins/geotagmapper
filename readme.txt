@@ -10,7 +10,7 @@ Description: Geotagmapper adds geographical identification metadata (latitude an
 
 == Description ==
 
-Bindet Geo-Tags, in den &lt;head&gt;-Bereich ein.
+Geotagmapper adds geographical identification metadata (latitude and longitude) to the HTML header.You only have to specify your address.
 
 == Installation ==
 
