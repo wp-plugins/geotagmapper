@@ -6,7 +6,7 @@ Requires at least: 2.5
 Tested up to: 2.9.2
 Stable tag: "trunk"
 
-Description: Geotagmapper adds geographical identification metadata (latitude and longitude) to the HTML header.You only have to specify your address.
+Description: Geotagmapper adds geographical identification metadata (latitude and longitude) to the HTML header. You only have to specify an address.
 
 == Description ==
 

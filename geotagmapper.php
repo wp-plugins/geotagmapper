@@ -2,7 +2,7 @@
 /*
 Plugin Name: Geotagmapper
 Plugin URI: http://wordpress.org/extend/plugins/geotagmapper/
-Description: Geotagmapper adds geographical identification metadata (latitude and longitude) to the HTML header.You only have to specify your address.
+Description: Geotagmapper adds geographical identification metadata (latitude and longitude) to the HTML header. You only have to specify an address.
 Version: 1.1
 Author: J&uuml;rgen Schulze
 Author URI: http://1manfactory.com
