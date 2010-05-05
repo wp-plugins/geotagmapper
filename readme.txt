@@ -1,7 +1,7 @@
 === Geotagmapper ===
 Contributors: Juergen Schulze
 Donate link: http://juergen-schulze.de
-Tags: geo, map, karte, blogmap, geotagmapper, blogkarte, google maps, maps
+Tags: geo, map, karte, blogmap, geotagmapper, blogkarte, google maps, maps, coordinates, google map, google, mashup, mapping, geocms
 Requires at least: 2.5
 Tested up to: 2.9.2
 Stable tag: "trunk"
