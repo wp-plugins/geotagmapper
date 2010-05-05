@@ -27,4 +27,7 @@ Geotagmapper adds geographical identification metadata (latitude and longitude) 
 
 == Screenshots ==
 
-* none
+1. Step 1
+2. Step 2
+3. Step 3
+4. Step 4
