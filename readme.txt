@@ -3,7 +3,7 @@ Contributors: Juergen Schulze  (1manfactory.com)
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ESLEBR77J67A2
 Tags: geo, map, karte, blogmap, geotagmapper, blogkarte, google maps, maps, coordinates, google map, google, mashup, mapping, geocms, geographic, georss, location, geocoding
 Requires at least: 2.5
-Tested up to: 2.9.2
+Tested up to: 3.0
 Stable tag: "trunk"
 
 Description: Geotagmapper adds geographical identification metadata (latitude and longitude) to the HTML header. You only have to specify an address.
@@ -32,7 +32,12 @@ It's best to use the build in delete function of wordpress. That way all the sto
 
 == Changelog ==
 
+= 1.3 (18.06.2010) =
+* tested with Wordpress 3.0 ok
+* Switched from XML to JSON data import
+
 = 1.2 (16.06.2010) =
+
 * ability to insert geodata in frontpage, pages or posts only
 * creating function to place data manually into templates
 

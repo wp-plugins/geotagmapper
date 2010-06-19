@@ -3,7 +3,7 @@
 Plugin Name: Geotagmapper
 Plugin URI: http://1manfactory.com/wordpress-plugin-geotagmapper-customize-geo-information-inside-header-automatically/
 Description: Geotagmapper adds geographical identification metadata (latitude and longitude) to the HTML header. You only have to specify an address.
-Version: 1.2
+Version: 1.3
 Author: J&uuml;rgen Schulze
 Author URI: http://1manfactory.com
 License: GNU GPL
@@ -27,7 +27,7 @@ License: GNU GPL
 */
 
 
-DEFINE("DEBUG", "false");	# set "true" or "false", quotation marks needed
+DEFINE("GTMDEBUG", true);
 
 function my_plugin_admin_menu(){
 	$page=add_submenu_page("options-general.php", "Geotagmapper Settings", "Geotagmapper", 9, basename(__FILE__), 'my_plugin_options');
@@ -63,6 +63,7 @@ function my_plugin_options(){
 	<form method="post" action="options.php" id="my_plugin_form">';
 	wp_nonce_field('update-options');
 	print '<input type="hidden" name="action" value="update" />
+	<input type="hidden" name="geotagmapper_output_type" value="json" />
 	<input type="hidden" name="page_options" value="geotagmapper_place_on_search,geotagmapper_place_on_tag,geotagmapper_place_on_category,geotagmapper_place_on_single_page,geotagmapper_place_on_single_post,geotagmapper_place_on_front,geotagmapper_street,geotagmapper_lat,geotagmapper_lng,geotagmapper_zip,geotagmapper_country,geotagmapper_state,geotagmapper_city,geotagmapper_country_code,geotagmapper_subcountry_code,geotagmapper_track" />
 	<table class="form-table">
 	<tr>
@@ -85,7 +86,7 @@ function my_plugin_options(){
 
 			<br />
 
-			<label for="geotagmapper_lat"><a href="#" onclick="geotagmapperDetect(\''. WP_PLUGIN_URL .'/geotagmapper/proxy.php\', debug='.DEBUG.');return false;">Get data</a> from Google maps.</label><br />
+			<label for="geotagmapper_lat"><a href="#" onclick="geotagmapperDetect(\''. WP_PLUGIN_URL .'/geotagmapper/proxy.php\', gtmdebug='.GTMDEBUG.');return false;">Get data</a> from Google maps.</label><br />
 
 			<br />
 
@@ -151,6 +152,7 @@ function geotagmapper_meta_print() {
 
 function my_plugin_admin_init() {
 	wp_register_script('myPluginScript', WP_PLUGIN_URL . '/geotagmapper/geotagmapper.js');
+	wp_register_script('myPluginScript', WP_PLUGIN_URL . '/geotagmapper/json2.js');
 }
 
 function my_plugin_optionselected($checkValue) {
