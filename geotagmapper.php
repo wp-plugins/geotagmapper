@@ -170,6 +170,14 @@ function geotagmapper_uninstall() {
 	delete_option('geotagmapper_place_on_category');
 	delete_option('geotagmapper_place_on_tag');
 	delete_option('geotagmapper_place_on_search');
+	delete_option('geotagmapper_country');
+	delete_option('geotagmapper_state');
+	delete_option('geotagmapper_zip');
+	delete_option('geotagmapper_lat');
+	delete_option('geotagmapper_lng');
+	delete_option('geotagmapper_city');
+	delete_option('geotagmapper_country_code');
+	delete_option('geotagmapper_subcountry_code');
 }
 
 add_action('admin_init', 'my_plugin_admin_init');
