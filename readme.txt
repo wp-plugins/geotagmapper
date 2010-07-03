@@ -32,6 +32,10 @@ It's best to use the build in delete function of wordpress. That way all the sto
 
 == Changelog ==
 
+= 1.4 (03.07.2010) =
+* now multilanguage
+* added German
+
 = 1.3 (18.06.2010) =
 * tested with Wordpress 3.0 ok
 * Switched from XML to JSON data import
