@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: geotagmapper\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-03 12:00+0100\n"
-"PO-Revision-Date: 2010-07-03 12:04+0100\n"
+"POT-Creation-Date: 2011-02-25 14:08+0100\n"
+"PO-Revision-Date: 2011-02-25 14:09+0100\n"
 "Last-Translator: Juergen <1manfactory@gmail.com>\n"
 "Language-Team: Juergen Schulze <1manfactory@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -104,27 +104,27 @@ msgstr "Einzelner Artikel (Single Post)"
 msgid "Single page"
 msgstr "Einzelne Seite (Single Page)"
 
-#: wp-content\plugins\geotagmapper/geotagmapper.php:103
+#: wp-content\plugins\geotagmapper/geotagmapper.php:102
 msgid "Category archive"
 msgstr "Kategorienarchiv"
 
-#: wp-content\plugins\geotagmapper/geotagmapper.php:104
+#: wp-content\plugins\geotagmapper/geotagmapper.php:103
 msgid "Tag Archive"
 msgstr "Stichpunkt (Tag) Archiv"
 
-#: wp-content\plugins\geotagmapper/geotagmapper.php:105
+#: wp-content\plugins\geotagmapper/geotagmapper.php:104
 msgid "Search results"
 msgstr "Suchergebnisse"
 
-#: wp-content\plugins\geotagmapper/geotagmapper.php:108
+#: wp-content\plugins\geotagmapper/geotagmapper.php:107
 msgid "Or use the code"
 msgstr "Order benutzen Sie den Code"
 
-#: wp-content\plugins\geotagmapper/geotagmapper.php:114
+#: wp-content\plugins\geotagmapper/geotagmapper.php:113
 msgid "to place the Geodata anywhere in the header"
 msgstr "um Geodaten irgendwo im Kopf (Header) zu platzieren"
 
-#: wp-content\plugins\geotagmapper/geotagmapper.php:118
+#: wp-content\plugins\geotagmapper/geotagmapper.php:117
 msgid "Save Changes"
 msgstr "Änderungen speichern"
 

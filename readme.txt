@@ -1,9 +1,9 @@
 === Geotagmapper ===
 Contributors: Juergen Schulze  (1manfactory.com)
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ESLEBR77J67A2
+Donate link: http://1manfactory.com/donate
 Tags: geo, map, karte, blogmap, geotagmapper, blogkarte, google maps, maps, coordinates, google map, google, mashup, mapping, geocms, geographic, georss, location, geocoding
 Requires at least: 2.5
-Tested up to: 3.0
+Tested up to: 3.1
 Stable tag: "trunk"
 
 Description: Geotagmapper adds geographical identification metadata (latitude and longitude) to the HTML header. You only have to specify an address.
@@ -32,6 +32,10 @@ It's best to use the build in delete function of wordpress. That way all the sto
 
 == Changelog ==
 
+= 1.5 (25.02.2011) =
+* test with Wordpress 3.1 -> ok
+* translations
+
 = 1.4 (03.07.2010) =
 * now multilanguage
 * added German
@@ -54,7 +58,7 @@ Use the function "geotagmapper_meta_print". E.g. place this code inside your tem
 
 = What is the plugin page?  =
 
-[Geotagmapper](http://1manfactory.com/wordpress-plugin-geotagmapper-customize-geo-information-inside-header-automatically/ "Geotagmapper")
+[Geotagmapper](http://1manfactory.com/gtm "Geotagmapper")
 
 = Do you have other plugins?  =
 
@@ -62,11 +66,11 @@ Check out my other [Wordpress Plugins](http://wordpress.org/extend/plugins/profi
 
 = Where do I post my feedback? =
 
-Post it at the plugin page: [Geotagmapper](http://1manfactory.com/wordpress-plugin-geotagmapper-customize-geo-information-inside-header-automatically/ "Geotagmapper")
+Post it at the plugin page: [Geotagmapper](http://1manfactory.com/gtm "Geotagmapper")
 
 = How can I support you? =
 
-That is nice of you. Donation link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ESLEBR77J67A2
+That is nice of you. Donation link: http://1manfactory.com/donate
 
 == Screenshots ==
 

@@ -1,20 +1,19 @@
 <?php
 /*
 Plugin Name: Geotagmapper
-Plugin URI: http://1manfactory.com/wordpress-plugin-geotagmapper-customize-geo-information-inside-header-automatically/
+Plugin URI: http://1manfactory.com/gtm
 Description: Geotagmapper adds geographical identification metadata (latitude and longitude) to the HTML header. You only have to specify an address.
-Version: 1.4
-Author: J&uuml;rgen Schulze
+Version: 1.5
+Author: Juergen Schulze, 1manfactory@gmail.com
 Author URI: http://1manfactory.com
-License: GNU GPL
+License: GPL2
 */
 
-/*  Copyright 2010 Juergen Schulze, 1manfactory.com (email : 1manfactory@gmail.com)
+/*  Copyright 2011  Juergen Schulze  (email : 1manfactory@gmail.com)
 
     This program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation; either version 2 of the License, or
-    (at your option) any later version.
+    it under the terms of the GNU General Public License, version 2, as 
+    published by the Free Software Foundation.
 
     This program is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -23,7 +22,7 @@ License: GNU GPL
 
     You should have received a copy of the GNU General Public License
     along with this program; if not, write to the Free Software
-    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
 DEFINE("GTMDEBUG", "false");	# don't delete the quote signs!!
@@ -116,6 +115,24 @@ function my_plugin_options(){
 	</table>
 	<p class="submit"><input type="submit" name="submit" value="'.__('Save Changes', 'geotagmapper').'" /></p>
 	</form>
+
+<div class="postbox-container" style="width:100%;">
+
+	<div class="metabox-holder">
+		<div class="meta-box-sortables">
+			<div class="postbox">
+				<div class="handlediv"><br /></div>
+					<h3 class="hndle">'.__('Infobox ', 'OldPostSpinner').'</h3>
+					<div class="inside" style="padding:10px; padding-top:0;">';
+					require_once('whatsup.php');
+					print'
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</div>
+	
 	</div>
 	';
 }
