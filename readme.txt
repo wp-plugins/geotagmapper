@@ -1,10 +1,10 @@
 === Geotagmapper ===
-Contributors: Juergen Schulze  (1manfactory.com)
-Donate link: http://1manfactory.com/donate
+Contributors: 1manfactory
+Donate link: http://1manfactory.com/donate 
 Tags: geo, map, karte, blogmap, geotagmapper, blogkarte, google maps, maps, coordinates, google map, google, mashup, mapping, geocms, geographic, georss, location, geocoding
 Requires at least: 2.5
 Tested up to: 3.1
-Stable tag: "trunk"
+Stable tag: 1.5
 
 Description: Geotagmapper adds geographical identification metadata (latitude and longitude) to the HTML header. You only have to specify an address.
 
