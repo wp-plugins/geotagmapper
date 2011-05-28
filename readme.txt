@@ -4,7 +4,7 @@ Donate link: http://1manfactory.com/donate
 Tags: geo, map, karte, blogmap, geotagmapper, blogkarte, google maps, maps, coordinates, google map, google, mashup, mapping, geocms, geographic, georss, location, geocoding
 Requires at least: 2.5
 Tested up to: 3.1
-Stable tag: 1.5
+Stable tag: 1.5.1
 
 Description: Geotagmapper adds geographical identification metadata (latitude and longitude) to the HTML header. You only have to specify an address.
 
@@ -31,6 +31,10 @@ Check out my other [Wordpress Plugins](http://wordpress.org/extend/plugins/profi
 It's best to use the build in delete function of wordpress. That way all the stored data will be removed and no orphaned data will stay.
 
 == Changelog ==
+
+= 1.5.1 (28.05.2011) =
+* test wird Wordpress 3.1.3 -> ok
+* bugfix: "Fatal error: Cannot redeclare my_plugin_options()"
 
 = 1.5 (25.02.2011) =
 * test with Wordpress 3.1 -> ok

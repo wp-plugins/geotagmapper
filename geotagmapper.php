@@ -3,7 +3,7 @@
 Plugin Name: Geotagmapper
 Plugin URI: http://1manfactory.com/gtm
 Description: Geotagmapper adds geographical identification metadata (latitude and longitude) to the HTML header. You only have to specify an address.
-Version: 1.5
+Version: 1.5.1
 Author: Juergen Schulze, 1manfactory@gmail.com
 Author URI: http://1manfactory.com
 License: GPL2
@@ -27,12 +27,12 @@ License: GPL2
 
 DEFINE("GTMDEBUG", "false");	# don't delete the quote signs!!
 
-function my_plugin_admin_menu(){
-	$page=add_submenu_page("options-general.php", __('Geotagmapper Settings', 'geotagmapper'), "Geotagmapper", 9, basename(__FILE__), 'my_plugin_options');
-	add_action('admin_print_scripts-' . $page, 'my_plugin_admin_styles');
+function geotagmapper_admin_menu(){
+	$page=add_submenu_page("options-general.php", __('Geotagmapper Settings', 'geotagmapper'), "Geotagmapper", 9, basename(__FILE__), 'geotagmapper_options');
+	add_action('admin_print_scripts-' . $page, 'geotagmapper_admin_styles');
 }
 
-function my_plugin_admin_styles() {
+function geotagmapper_admin_styles() {
 	wp_enqueue_script('myPluginScript');
 }
 
@@ -46,7 +46,7 @@ function geotagmapper_ping(){
   return $buffer;
 }
 
-function my_plugin_options(){
+function geotagmapper_options(){
 
 	if ($_GET['updated'] == true) {
 	  $buffer = geotagmapper_ping();
@@ -58,7 +58,7 @@ function my_plugin_options(){
 	}
 	print '<div class="wrap">
 	<h2>'.__('Geotagmapper Settings', 'geotagmapper').'</h2>
-	<form method="post" action="options.php" id="my_plugin_form">';
+	<form method="post" action="options.php" id="geotagmapper_form">';
 	wp_nonce_field('update-options');
 	print '<input type="hidden" name="action" value="update" />
 	<input type="hidden" name="geotagmapper_output_type" value="json" />
@@ -95,12 +95,12 @@ function my_plugin_options(){
 
 			<br />	
 			<label for="geotagmapper_zip">'.__('Insert Geodata into header of', 'geotagmapper').'</label><br />
-			<input type="checkbox" id="geotagmapper_place_on_front" name="geotagmapper_place_on_front" '.my_plugin_optionselected(get_option('geotagmapper_place_on_front')).' />&nbsp;'.__('Front page', 'geotagmapper').'&nbsp;&nbsp;
-			<input type="checkbox" id="geotagmapper_place_on_single_post" name="geotagmapper_place_on_single_post" '.my_plugin_optionselected(get_option('geotagmapper_place_on_single_post')).' />&nbsp;'.__('Single post', 'geotagmapper').'&nbsp;&nbsp;
-			<input type="checkbox" id="geotagmapper_place_on_single_page" name="geotagmapper_place_on_single_page" '.my_plugin_optionselected(get_option('geotagmapper_place_on_single_page')).' />&nbsp;'.__('Single page', 'geotagmapper').'&nbsp;&nbsp;
-			<input type="checkbox" id="geotagmapper_place_on_category" name="geotagmapper_place_on_category" '.my_plugin_optionselected(get_option('geotagmapper_place_on_category')).' />&nbsp;'.__('Category archive', 'geotagmapper').'&nbsp;&nbsp;
-			<input type="checkbox" id="geotagmapper_place_on_tag" name="geotagmapper_place_on_tag" '.my_plugin_optionselected(get_option('geotagmapper_place_on_tag')).' />&nbsp;'.__('Tag Archive', 'geotagmapper').'&nbsp;&nbsp;
-			<input type="checkbox" id="geotagmapper_place_on_search" name="geotagmapper_place_on_search" '.my_plugin_optionselected(get_option('geotagmapper_place_on_search')).' />&nbsp;'.__('Search results', 'geotagmapper').'
+			<input type="checkbox" id="geotagmapper_place_on_front" name="geotagmapper_place_on_front" '.geotagmapper_optionselected(get_option('geotagmapper_place_on_front')).' />&nbsp;'.__('Front page', 'geotagmapper').'&nbsp;&nbsp;
+			<input type="checkbox" id="geotagmapper_place_on_single_post" name="geotagmapper_place_on_single_post" '.geotagmapper_optionselected(get_option('geotagmapper_place_on_single_post')).' />&nbsp;'.__('Single post', 'geotagmapper').'&nbsp;&nbsp;
+			<input type="checkbox" id="geotagmapper_place_on_single_page" name="geotagmapper_place_on_single_page" '.geotagmapper_optionselected(get_option('geotagmapper_place_on_single_page')).' />&nbsp;'.__('Single page', 'geotagmapper').'&nbsp;&nbsp;
+			<input type="checkbox" id="geotagmapper_place_on_category" name="geotagmapper_place_on_category" '.geotagmapper_optionselected(get_option('geotagmapper_place_on_category')).' />&nbsp;'.__('Category archive', 'geotagmapper').'&nbsp;&nbsp;
+			<input type="checkbox" id="geotagmapper_place_on_tag" name="geotagmapper_place_on_tag" '.geotagmapper_optionselected(get_option('geotagmapper_place_on_tag')).' />&nbsp;'.__('Tag Archive', 'geotagmapper').'&nbsp;&nbsp;
+			<input type="checkbox" id="geotagmapper_place_on_search" name="geotagmapper_place_on_search" '.geotagmapper_optionselected(get_option('geotagmapper_place_on_search')).' />&nbsp;'.__('Search results', 'geotagmapper').'
 
 			<br /><br />
 			'.__('Or use the code', 'geotagmapper').':
@@ -162,12 +162,12 @@ function geotagmapper_meta_print() {
 	';
 }
 
-function my_plugin_admin_init() {
+function geotagmapper_admin_init() {
 	wp_register_script('myPluginScript', WP_PLUGIN_URL . '/geotagmapper/geotagmapper.js');
 	wp_register_script('myPluginScript', WP_PLUGIN_URL . '/geotagmapper/json2.js');
 }
 
-function my_plugin_optionselected($checkValue) {
+function geotagmapper_optionselected($checkValue) {
 	if($checkValue) {
 		return 'checked';
 	}
@@ -207,10 +207,10 @@ function geotagmapper_set_lang_file() {
 }
 
 geotagmapper_set_lang_file();
-add_action('admin_init', 'my_plugin_admin_init');
-add_action('admin_menu', 'my_plugin_admin_menu');
+add_action('admin_init', 'geotagmapper_admin_init');
+add_action('admin_menu', 'geotagmapper_admin_menu');
 add_action('publish_post', 'geotagmapper_ping');
-add_action('admin_menu', 'my_plugin_admin_menu');
+add_action('admin_menu', 'geotagmapper_admin_menu');
 add_action('wp_head', 'geotagmapper_meta');
 register_uninstall_hook(__FILE__, 'geotagmapper_uninstall');
 

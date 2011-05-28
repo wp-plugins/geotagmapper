@@ -142,7 +142,7 @@ return (xmlDoc.getElementsByTagName(tag)[parent].childNodes[child].nodeValue);
 
 // detect geo information with ajax api call
 function geotagmapperDetect(ajaxurl) {
-	ajax(ajaxurl, null, 'POST', 'my_plugin_form', geotagmapperDetectBack);
+	ajax(ajaxurl, null, 'POST', 'geotagmapper_form', geotagmapperDetectBack);
 }
 
 function geotagmapperDetectBack(returnValue) {
