@@ -33,8 +33,8 @@ It's best to use the build in delete function of wordpress. That way all the sto
 == Changelog ==
 
 = 1.5.1 (28.05.2011) =
-* test wird Wordpress 3.1.3 -> ok
-* bugfix: "Fatal error: Cannot redeclare my_plugin_options()"
+* Test wird Wordpress 3.1.3 -> ok
+* Bugfix: "Fatal error: Cannot redeclare my_plugin_options()"
 
 = 1.5 (25.02.2011) =
 * test with Wordpress 3.1 -> ok
